@@ -1,0 +1,55 @@
+node {
+    stage('build')
+    {
+        echo "building the project ........."
+    }
+    stage('test')
+    {
+    echo "testing the project......."
+}
+stage('deploy')
+{
+    echo " deployong the project....."
+    
+}
+stage('release')
+{
+    echo " release the project....."
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+pipeline  {
+    agent any
+    stages {
+        stage('build') {
+            steps  {
+            }
+}
+        stage('deploy') {
+            steps {
+}
+}
+        stage('test) {
+            steps {
+}
+}
+        stage('release') {
+            steps  {
+}
+}
+ }
+}
+
+
