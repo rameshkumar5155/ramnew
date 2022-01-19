@@ -1,0 +1,21 @@
+ sudo sed -i '/ swap / s/^\(.*\)$/#1/g' /etc/fstab
+
+ sudo setenforce 0
+
+AWSAccessKeyId=AKIARTIF2OH2PYXOEYUZ						
+AWSSecretKey=
+
+
+
+
+kops create cluster --name=mycluster.k8.local \ 
+--zones=ap-south-1a,ap-south-1b\
+ --master-zones=ap-south-1 \
+--node-count=2 \
+--node-size=t2.medium \
+--master-size=t2.medium \
+--cloud aws
+--yes						
+	
+
+kops create cluster --name kubernates.ramesh5155.xyz --zones ap-south-1a --master-size t2.micro --node-size t2.micro --kubernates -version 1.19.8					
